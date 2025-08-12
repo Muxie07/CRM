@@ -1,6 +1,6 @@
 import AdminLayout from "@/components/admin-layout"
-import { Skeleton } from "@/components/ui/skeleton"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export default function PricelistLoading() {
   return (
@@ -12,14 +12,18 @@ export default function PricelistLoading() {
             <Skeleton className="h-8 w-64 mb-2" />
             <Skeleton className="h-4 w-96" />
           </div>
-          <Skeleton className="h-10 w-32" />
+          <div className="flex gap-2">
+            <Skeleton className="h-10 w-20" />
+            <Skeleton className="h-10 w-20" />
+            <Skeleton className="h-10 w-32" />
+          </div>
         </div>
 
         {/* Filters Skeleton */}
         <Card>
           <CardContent className="p-6">
             <div className="flex flex-col sm:flex-row gap-4">
-              <Skeleton className="h-10 flex-1" />
+              <Skeleton className="flex-1 h-10" />
               <div className="flex gap-2">
                 <Skeleton className="h-10 w-32" />
                 <Skeleton className="h-10 w-20" />
@@ -45,20 +49,22 @@ export default function PricelistLoading() {
         {/* Table Skeleton */}
         <Card>
           <CardHeader>
-            <Skeleton className="h-6 w-32" />
+            <Skeleton className="h-6 w-48" />
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {[...Array(5)].map((_, i) => (
-                <div key={i} className="flex items-center space-x-4">
-                  <Skeleton className="h-4 w-48" />
-                  <Skeleton className="h-4 w-24" />
-                  <Skeleton className="h-4 w-32" />
-                  <Skeleton className="h-4 w-20" />
-                  <Skeleton className="h-4 w-16" />
-                  <Skeleton className="h-4 w-20" />
-                  <Skeleton className="h-4 w-24" />
-                  <Skeleton className="h-4 w-16" />
+              {/* Table Header */}
+              <div className="grid grid-cols-10 gap-4 pb-2 border-b">
+                {[...Array(10)].map((_, i) => (
+                  <Skeleton key={i} className="h-4 w-full" />
+                ))}
+              </div>
+              {/* Table Rows */}
+              {[...Array(8)].map((_, i) => (
+                <div key={i} className="grid grid-cols-10 gap-4 py-2">
+                  {[...Array(10)].map((_, j) => (
+                    <Skeleton key={j} className="h-4 w-full" />
+                  ))}
                 </div>
               ))}
             </div>
