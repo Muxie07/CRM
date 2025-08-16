@@ -1499,16 +1499,7 @@ const telecomPricelistData: PricelistItem[] = [
   {
     id: "106",
     model: "GRP2601",
-    description: "1 Lines, 1 SIP Accounts",
-    t2MspStockistPrice: 2530,
-    resellerPrice: 3229,
-    endCustomerPrice: 3552,
-    mrpPrice: 6094,
-    boxQuantity: 8,
-    extendedWarranty: 290,
-    category: "HD IP Phones & Headsets",
-    lastUpdated: "2024-01-15",
-    status: "active",
+    description: '1 Lines, 1 SIP Accounts "active',
   },
   {
     id: "107",
